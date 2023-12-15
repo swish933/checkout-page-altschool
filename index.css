@@ -376,7 +376,7 @@ form>section button {
 }
 
 .checkout-info .plan_benefits p::before {
-    content: url(/assets/check_mark.svg);
+    content: url(./assets/check_mark.svg);
     margin-inline-end: 1ch;
     vertical-align: middle;
 }
