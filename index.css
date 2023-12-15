@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
 *,
 *::before,
@@ -27,8 +27,8 @@ body {
     -webkit-font-smoothing: antialiased;
     background: hsl(204, 33%, 97%);
     padding-inline: 2.5rem;
-
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-family: 'Lato', sans-serif;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif; */
 }
 
 img,
@@ -130,29 +130,26 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block: 5rem;
+    padding-block-start: 5rem;
 }
 
 main .checkout {
     display: flex;
     flex-wrap: wrap;
     max-width: 55.75rem;
-    /* margin-block-start: 5rem; */
     border-radius: 0.375rem;
     gap: 0;
     background: hsl(0, 0%, 100%);
     box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.05), 0px 15px 35px 0px hsla(204, 29%, 24%, 0.1);
-
     overflow: hidden;
 }
 
-.checkout>section:first-of-type {
-
+.checkout>.checkout-form {
     color: hsla(211, 35%, 17%, 1);
     flex: 3;
 }
 
-.checkout>section:last-of-type {
+.checkout>.checkout-info {
     flex: 1;
     background: hsla(204, 84%, 41%, 1);
     color: hsl(0, 0%, 100%);
@@ -243,7 +240,7 @@ form>section .card_input {
     display: flex;
     flex-wrap: wrap;
     margin-block-start: 0.45rem;
-    /* align-items: center; */
+    border-radius: .25rem;
     background: #EDEFF2;
 }
 
@@ -267,23 +264,21 @@ input[type=number] {
 
 .card_input:focus-within {
     outline-width: 2px;
-    /* outline-color: #4D90FE; */
     outline-style: solid;
 }
 
 .card_input input:nth-child(1) {
-    flex: 1;
-    /* max-width: 9rem; */
+    /* flex: 1; */
     margin-inline-end: auto;
 }
 
 .card_input :nth-child(2) {
-    flex: .5;
+    /* flex: .5; */
     max-width: 4rem;
 }
 
 .card_input :nth-child(3) {
-    flex: .25;
+    /* flex: .25; */
     max-width: 3rem;
 }
 
@@ -335,6 +330,111 @@ form>section button {
     display: flex;
     gap: 0.63rem;
     margin-block-end: 2rem;
+    color: #646E7A;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.00063rem;
+}
+
+.checkout-form .help span {
+    color: #1D2C3C;
+    font-weight: 700;
+}
+
+
+.checkout-info .plan_price {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.00094rem;
+    display: flex;
+    align-items: start;
+    margin-top: .35rem;
+}
+
+.checkout-info .plan_price>p:first-of-type {
+    font-size: 1.5rem;
+}
+
+.checkout-info .plan_price span {
+    font-size: 3.75rem;
+    font-weight: 300;
+}
+
+.checkout-info p.italic {
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.0005rem;
+}
+
+.checkout-info .plan_benefits {
+    margin-block-start: 2.25rem;
+}
+
+.checkout-info .plan_benefits p::before {
+    content: url(/assets/check_mark.svg);
+    margin-inline-end: 1ch;
+    vertical-align: middle;
+}
+
+.checkout-info .plan_switch {
+    margin-block-start: 2.38rem;
+    /* margin-block-end: 2.56rem; */
+}
+
+.plan_switch>strong {
+    position: relative;
+}
+
+.plan_switch>strong::after {
+    content: '';
+    width: 100%;
+    border: hsla(189, 100%, 86%, 0.5) 2px solid;
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+
+
+.checkout-info hr {
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    margin-block: 2.56rem;
+}
+
+.checkout-info .quote {
+    font-style: italic;
+    font-size: 1.125rem;
+    margin-block-end: 1rem;
+}
+
+.checkout-info .quoter {
+    display: flex;
+    gap: 0.87rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+.checkout-info .quoter img {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+footer p {
+    margin-block-start: 2.5rem;
+    margin-block-end: 5rem;
+    color: #636B6F;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+footer p span {
+    color: #31708F;
 }
 
 
