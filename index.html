@@ -21,20 +21,21 @@
 			</ul>
 		</nav>
 		<main id="main">
-			<section class="checkout-info">
+			<section class="checkout">
 				<section class="checkout-form">
 					<header>
 						<h1>Checkout</h1>
 					</header>
-					<form>
+					<form action="#">
 						<section>
-							<h4>
-								<span><b>1</b></span> Your Basic Information
-							</h4>
+							<header class="basic_info">
+								<span>1</span>
+								<h4>Your Basic Information</h4>
+							</header>
 
 							<div class="user_info">
 								<label for="firstname">
-									First name
+									First Name
 									<input
 										type="text"
 										name="firstname"
@@ -43,12 +44,12 @@
 									/>
 								</label>
 								<label for="lastname">
-									Last name
+									Last Name
 									<input
 										type="text"
 										name="lastname"
 										id="lastname"
-										placeholder="Jane"
+										placeholder="Doe"
 									/>
 								</label>
 								<label for="email"
@@ -64,21 +65,52 @@
 						</section>
 
 						<section>
-							<h4>
-								<span><b>2</b></span> Your Payment Information
-							</h4>
+							<header>
+								<span>2</span>
+								<h4>Your Payment Information</h4>
+							</header>
 
 							<label for="credit_card"> Credit card </label>
 
 							<div class="card_input">
-								<input type="number" placeholder="Card Number" />
-								<input type="text" placeholder="MM / YY" />
-								<input type="text" placeholder="CVC" />
+								<input
+									type="number"
+									autocomplete="cc-number"
+									inputmode="numeric"
+									placeholder="Card Number"
+									name="credit_card"
+									id="credit_card"
+								/>
+
+								<input
+									autocomplete="cc-exp"
+									placeholder="MM/YY"
+									maxlength="5"
+								/>
+								<input
+									inputmode="numeric"
+									autocomplete="cc-csc"
+									placeholder="CVC"
+									maxlength="3"
+								/>
 							</div>
+						</section>
+
+						<section>
+							<button type="button">Buy WP Pusher</button>
+							<p class="help">
+								<span><img src="/assets/help.svg" alt="help icon" /> </span>
+								Need any help? Don’t hesitate to contact support!
+							</p>
+							<img
+								class="stripe_logo"
+								src="/assets/stripe.svg"
+								alt="stripe logo"
+							/>
 						</section>
 					</form>
 				</section>
-				<section>
+				<section class="checkout-info">
 					<h3>Freelancer</h3>
 				</section>
 			</section>
