@@ -26,7 +26,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background: hsl(204, 33%, 97%);
-    padding-inline: 2.5rem;
+    padding-inline: 3rem;
     font-family: 'Lato', sans-serif;
 }
 
@@ -107,6 +107,10 @@ nav li:last-of-type:hover a {
 }
 
 @media (max-width:768px) {
+    body {
+        padding-inline: 1rem;
+    }
+
     nav {
         flex-direction: column;
     }
@@ -166,7 +170,7 @@ main .checkout {
 }
 
 .checkout-form>header {
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
     padding-block-start: 2.5rem;
     padding-block-end: 1.5rem;
     border-bottom: 2px solid #F5F7FA;
@@ -190,7 +194,7 @@ main .checkout {
 
 
 .checkout-form form>section {
-    padding-inline: 3rem;
+    padding-inline: 2.5rem;
     padding-block-start: 2.2rem;
     padding-block-end: 2.5rem;
 }
@@ -382,6 +386,11 @@ form>section button {
 .checkout-info .plan_benefits {
     margin-block-start: 2.25rem;
 }
+
+/* .checkout-info .plan_benefits p {
+    outline: 1px solid crimson;
+    width: fit-content;
+} */
 
 .checkout-info .plan_benefits p::before {
     content: url(./assets/check_mark.svg);
